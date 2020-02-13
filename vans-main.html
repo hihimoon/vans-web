@@ -1,146 +1,793 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>VANS</title>
-        <link rel="stylesheet" href="./vans-main.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    </head>
-    <body>
-        
-    <!-- 헤더 영역 -->
+
+<head>
+    <meta charset="utf-8">
+    <title>VANS</title>
+    <link rel="stylesheet" href="./vans-main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".presentation").click(function() {
+                $('.presentation').removeClass('presentation-active');
+                $(this).addClass('presentation-active');
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <!-- header 영역 -->
     <header class="header">
         <div class="nav_top_wrap">
             <ul class="nav_sub">
-                <li><a href="#">로그인/회원가입</a></li>
-                <li><a href="#">주문조회</a></li>
-                <li><a href="#">고객센터</a></li>
+                <li>
+                    <a href="#">로그인/회원가입
+                    </a>
+                </li>
+                <li>
+                    <a href="#">주문조회
+                    </a>
+                </li>
+                <li>
+                    <a href="#">고객센터
+                    </a>
+                </li>
             </ul>
         </div>
-    <nav class="nav_bottom_wrap">
-        <a class="logo" href="#">
-            <img src="./imgs/logo.png">
-        </a>
-        <ul class="nav_main">
-            <li class="nav-item"><a href="#">Men</a></li>
-            <li class="nav-item"><a href="#">Women</a></li>
-            <li class="nav-item"><a href="#">Kids</a></li>
-            <li class="nav-item"><a href="#">Customs</a></li>
-            <li class="nav-item"><a href="#">Skate</a></li>
-            <li class="nav-item"><a href="#">Surf</a></li>
-        </ul>
-<!--           <div class="menu-box">-->
+        <nav class="nav_bottom_wrap">
+            <a class="logo" href="#">
+                <img src="./imgs/logo.png">
+            </a>
+            <ul class="nav_main">
+                <li class="nav-item">
+                    <a href="#">Men
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Women
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Kids
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Customs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Skate
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Surf
+                    </a>
+                </li>
+            </ul>
             <div class="search">
                 <input type="text" placeholder="검색" class="form-input">
                 <button class="btn-search">
                     <span class="search-icons">
-                    <i class="material-icons">search</i>
+                        <i class="material-icons">search</i>
                     </span>
                 </button>
             </div>
-            <div class="cart">
+            <div class="shooping_cart">
                 <a href="#" class="cart-icon">
                     <img class="cartcart" src="./imgs/shopping_cart_2.png">
                 </a>
             </div>
-     </nav>
-     </header>
-
-<!-- 슬라이드쇼 영역 -->
-<div class="slideshow">
-    <a href="#">
-    <div class="slideshow-container"></div>    
-        <div class="con">
-            <p class="main-txt">
-            혁신적인 기술력의
-            <br>
-            <span class="black-txt">프로 스케이트 슈즈</span>
-            </p>
-            <p class="sub-txt">
-            비교할 수 없는 지지력과 편안한 쿠셔닝을 경험해보세요.
-            </p>
-            <span class="btn-white_lg">자세히 보기</span>
-        </div>
-        </a> 
+        </nav>
+    </header>
+    <!-- 슬라이드쇼 영역 -->
+    <div class="slideshow">
+        <a href="#">
+            <div class="slideshow-container">
+                <div class="con">
+                    <p class="main-txt">
+                    혁신적인 기술력의
+                    <br>
+                    <span class="black-txt">프로 스케이트 슈즈
+                    </span>
+                    </p>
+                    <p class="sub-txt">
+                    비교할 수 없는 지지력과 편안한 쿠셔닝을 경험해보세요.
+                    </p>
+                <button class="btn_lg">자세히 보기
+                </button>
+                </div>
+            </div>
+            <div class="controller">
+                <button class="prev">
+                    <img src="imgs/controller_prev.png">
+                </button>
+                <button class="next">
+                    <img src="imgs/controller_next.png">
+                </button>
+            </div>
+        </a>
         <ul class="slick-dots">
-            <li class="presentation presentation-active"><a href="#"></a></li>
-            <li class="presentation"><a href="#"></a></li>
-            <li class="presentation"><a href="#"></a></li>
-            <li class="presentation"><a href="#"></a></li>
-            <li class="presentation"><a href="#"></a></li>
-        </ul>
-</div>
-
-<!-- 컨텐츠 영역 -->
-<div class="thumbnail_layout_main">
-    <section class="your_style">
-        <h2 class="tit_main">what's your <span class="black-txt">style?</span></h2>
-        <ul>
-            <li class="style_thumbnail">
-                <a href="#"><img src="./imgs/slip_on.jpg" onmouseover="this.src='./imgs/slip_on_2.jpg'" onmouseout="this.src='./imgs/slip_on.jpg'">
-                <p class="style_title">슬립온</p>
+            <li class="presentation presentation-active">
+                <a href="#">
                 </a>
             </li>
-            <li>
-                <a href="#"><img src="./imgs/authentic.jpg" onmouseover="this.src='./imgs/authentic_2.jpg'" onmouseout="this.src='./imgs/authentic.jpg'">
-                <p class="style_title">에센틱</p>
+            <li class="presentation">
+                <a href="#">
                 </a>
             </li>
-            <li>
-                <a href="#"><img src="./imgs/era.jpg" onmouseover="this.src='./imgs/era_2.jpg'" onmouseout="this.src='./imgs/era.jpg'">
-                <p class="style_title">에라</p>
+            <li class="presentation">
+                <a href="#">
                 </a>
             </li>
-            <li>
-                <a href="#"><img src="./imgs/old_skool.jpg" onmouseover="this.src='./imgs/old_skool_2.jpg'" onmouseout="this.src='./imgs/old_skool.jpg'">
-                <p class="style_title">올드스쿨</p>
+            <li class="presentation">
+                <a href="#">
                 </a>
             </li>
-            <li>
-                <a href="#"><img src="./imgs/sk8_hi.jpg" onmouseover="this.src='./imgs/sk8_hi_2.jpg'" onmouseout="this.src='./imgs/sk8_hi.jpg'">
-                <p class="style_title">스케이트-하이</p>
+            <li class="presentation">
+                <a href="#">
                 </a>
             </li>
         </ul>
-    </section>
-</div>
-<div class="thumbnail_layout_main">
-    <section class="ranking">
-        <h2 class="tit_main">today's <span class="black-txt">ranking</span></h2>
-        <p class="tit_description">실시간 판매가 많은 순위입니다</p>
-        <div class="ranking-box">
-            <a href="#"><img src="imgs/anaheim_era_2.jpg"></a>
-        </div>
-        <div class="rankig-tab">
-           <ul class="tab__list">
-                <li class="tab__all">
-                    <button type="button">ALL</button>
+    </div>
+    <!-- 컨텐츠 영역 -->
+    <div class="thumbnail_layout_main">
+        <section class="your_style">
+            <h2 class="tit_main">what's your <span class="black-txt">style?</span>
+            </h2>
+            <ul class="style_thumbnail-wrap">
+                <li class="style_thumbnail">
+                    <a href="#">
+                       <img src="./imgs/slip_on.jpg" onmouseover="this.src='./imgs/slip_on_2.jpg'" onmouseout="this.src='./imgs/slip_on.jpg'">
+                        <p class="style_title">슬립온
+                        </p>
+                    </a>
                 </li>
-                 <li class="tab__men">
-                    <button type="button">MEN</button>
+                <li class="style_thumbnail">
+                    <a href="#">
+                       <img src="./imgs/authentic.jpg" onmouseover="this.src='./imgs/authentic_2.jpg'" onmouseout="this.src='./imgs/authentic.jpg'">
+                        <p class="style_title">에센틱
+                        </p>
+                    </a>
                 </li>
-                 <li class="tab__women">
-                    <button type="button">WOMEN</button>
+                <li class="style_thumbnail">
+                    <a href="#">
+                       <img src="./imgs/era.jpg" onmouseover="this.src='./imgs/era_2.jpg'" onmouseout="this.src='./imgs/era.jpg'">
+                        <p class="style_title">에라
+                        </p>
+                    </a>
                 </li>
-                
+                <li class="style_thumbnail">
+                    <a href="#">
+                       <img src="./imgs/old_skool.jpg" onmouseover="this.src='./imgs/old_skool_2.jpg'" onmouseout="this.src='./imgs/old_skool.jpg'">
+                        <p class="style_title">올드스쿨
+                        </p>
+                    </a>
+                </li>
+                <li class="style_thumbnail">
+                    <a href="#">
+                       <img src="./imgs/sk8_hi.jpg" onmouseover="this.src='./imgs/sk8_hi_2.jpg'" onmouseout="this.src='./imgs/sk8_hi.jpg'">
+                        <p class="style_title">스케이트-하이</p>
+                    </a>
+                </li>
             </ul>
-            <div class="best-tab">
-                <p class="best__reb-title">Best</p>
-                <p class="best__rep-rank">1</p>
-            </div>    
-            <ul class="best-list">
-                <li>
-                    <p>2</p>
-                    <a href="#"><img src=""></a>
+        </section>
+    </div>
+    <!-- today's ranking 영역 -->
+    <div class="thumbnail_layout_main">
+        <div class="ranking-wrap">
+            <section class="ranking">
+                <h2 class="tit_main">today's <span class="black-txt">ranking</span>
+                </h2>
+                <p class="tit_description">실시간 판매가 많은 순위입니다
+                </p>
+                <div class="ranking-box">
+                    <span class="ranking_label">1
+                    </span>
+                    <a href="#">
+                        <img src="imgs/anaheim_era_2.jpg">
+                    </a>
+                </div>
+                <div class="rankig-tab">
+                    <ul class="tab__list">
+                        <li class="tab__all">
+                            <button type="button">ALL
+                            </button>
+                        </li>
+                        <li class="tab__men">
+                            <button type="button">MEN
+                            </button>
+                        </li>
+                        <li class="tab__women">
+                            <button type="button">WOMEN
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="best-tab">
+                        <p class="best__rep-rank">1
+                        </p>
+                        <p class="best__reb-title">BEST
+                        </p>
+                    <div class="best__item-img">
+                        <a href="#">
+                            <img src="imgs/anaheim_era.jpg">
+                        </a>
+                    </div>
+                    <div class="best__item-info1">
+                        <a href="#">
+                            <p class="best__item-ellipsis">에너하임 에라 95 DX
+                            </p>
+                            <p class="best__item-price">79,000원
+                            </p>
+                        </a>
+                    </div>
+                    <div class="icon-wrap">
+                        <button class="favorite-active">
+                            <span class="favorite-icons">
+                                <i class="material-icons">favorite</i>
+                            </span>
+                        </button>
+                        <button class="cart">
+                            <img src="./imgs/shopping_cart_default.png">
+                        </button>
+                        <button class="btn_lg">바로구매
+                        </button>
+                    </div>
+                    </div>
+                    <ul class="best-list">
+                        <li class="best-list__item">
+                            <p class="best__item_rank2">2
+                            </p>
+                            <div class="best__item-img">
+                                <a href="#">
+                                    <img src="imgs/california_era.jpg">
+                                </a>
+                            </div>
+                            <div class="best__item-info2">
+                                <a href="#">
+                                    <p class="best__item-ellipsis">캘리포니아 에라
+                                    </p>
+                                    <p class="best__item-price">79,000원
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="best__item-favorite-icons">
+                                <button class="favorite">
+                                    <span class="favorite-icons">
+                                        <i class="material-icons">favorite_border</i>
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="best-list__item">
+                            <p class="best__item_rank2">3
+                            </p>
+                            <div class="best__item-img">
+                                <a href="#">
+                                    <img src="imgs/blackball_old_skool.jpg">
+                                </a>
+                            </div>
+                            <div class="best__item-info2">
+                                <a href="#">
+                                    <p class="best__item-ellipsis">블랙볼 올드스쿨
+                                    </p>
+                                    <p class="best__item-price">59,000원
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="best__item-favorite-icons">
+                                <button class="favorite">
+                                    <span class="favorite-icons">
+                                        <i class="material-icons">favorite_border</i>
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- 띠배너 영역 -->
+    <div class="sticky-banner">
+        <a href="#">
+            <img src="imgs/sticky-banner.jpg">
+        </a>
+    </div>
+    <!--new arrival 영역-->
+    <div class="thumbnail_layout_main">
+        <div class="new_arrival-wrap">
+            <section class="new_arrival">
+                <h2 class="tit_main">new <span class="black-txt">arribal</span>
+                </h2>
+                <ul class="item-card_wrap">
+                    <li class="item-card">
+                        <a href="#">
+                            <img src="./imgs/card-img1.jpg">
+                            <span class="badge">
+                                <i class="new">
+                                </i>
+                            </span>
+                            <div class="info">
+                                <h3 class="item__title">슈프림 x 반스 모션 로고 에라
+                                </h3>
+                                <p class="item__price">89,000 원
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item-card">
+                        <a href="#">
+                            <img src="./imgs/card-img2.jpg">
+                            <span class="badge">
+                                <i class="new">
+                                </i>
+                                <i class="hot">
+                                </i>
+                            </span>
+                            <div class="info">
+                                <h3 class="item__title">검 블록 체커보드 에센틱
+                                </h3>
+                                <p class="item__price">59,000 원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item-card">
+                        <a href="#">
+                            <img src="./imgs/card-img3.jpg">
+                            <span class="badge">
+                                <i class="new">
+                                </i>
+                            </span>
+                            <div class="info">
+                                <h3 class="item__title">vans x 데이비드 보위 티셔츠
+                                </h3>
+                                <p class="item__price">55,000 원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item-card">
+                        <a href="#">
+                            <img src="./imgs/card-img4.jpg">
+                            <span class="badge">
+                                <i class="new">
+                                </i>
+                                <i class="hot">
+                                </i>
+                            </span>
+                            <span></span>
+                            <div class="info">
+                                <h3 class="item__title">에너하임팩토리 올드스쿨
+                                </h3>
+                                <p class="item__price">89,000 원</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="controller">
+                <button class="prev">
+                    <img src="imgs/controller_prev.png">
+                </button>
+                <button class="next">
+                    <img src="imgs/controller_next.png">
+                </button>
+                </div>
+            </section>
+        </div>
+    </div> 
+    <!--best seller 영역-->
+    <div class="thumbnail_layout_main">
+        <div class="best_seller-wrap">
+            <section class="best_seller">
+                <h2 class="tit_main">best <span class="black-txt">seller</span>
+                </h2> 
+                <ul class="item-card_wrap">
+                    <li class="item-card">
+                        <a href="#">
+                            <img src="./imgs/card-img5.jpg">
+                            <span class="badge">
+                                <i class="new">
+                                </i>
+                            </span>
+                            <div class="info">
+                                <h3 class="item__title">클래식 올드스쿨
+                                </h3> 
+                                <p class="item__price">69,000 원
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item-card">
+                        <a href="#">
+                            <img src="./imgs/card-img6.jpg">
+                            <span class="badge">
+                                <i class="new">
+                                </i>
+                                <i class="hot">
+                                </i>
+                            </span>
+                            <div class="info">
+                                <h3 class="item__title">체커보드 슬립온 뮬
+                                </h3>
+                                <p class="item__price">59,000 원
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item-card">
+                        <a href="#">
+                            <img src="./imgs/card-img7.jpg">
+                            <span class="badge">
+                                <i class="new">
+                                </i>
+                            </span>
+                            <div class="info">
+                                <h3 class="item__title">블랙볼 올드스쿨
+                                </h3>
+                                <p class="item__price">75,000 원
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item-card">
+                        <a href="#">
+                            <img src="./imgs/card-img8.jpg">
+                            <span class="badge">
+                                <i class="new">
+                                </i>
+                                <i class="hot">
+                                </i>
+                            </span>
+                            <span></span>
+                            <div class="info">
+                                <h3 class="item__title">컴피쿠시 스케이트-하이
+                                </h3>
+                                <p class="item__price">95,000 원
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="controller">
+                <button class="prev">
+                    <img src="imgs/controller_prev.png">
+                </button>
+                <button class="next">
+                    <img src="imgs/controller_next.png">
+                </button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--magazine 영역-->
+    <div class="thumbnail_layout_main">
+        <section class="magazine">
+            <div class="magazine-bg">
+                <h2 class="tit_main">
+                <span class="black-txt">magazine
+                </span>
+                </h2>
+                <ul class="magazine-card_wrap">
+                    <li class="magazine-card">
+                        <a href="#">
+                            <img src="./imgs/magazine_card_img_1.jpg">
+                            <div class="magazine-info">
+                                <p class="magazine-badge">sneakers
+                                </p>
+                                <p class="magazine__title">사랑을 가득 담은, '러브 팩' 출시
+                                </p>
+                                <p class="magazine__sub">사랑을 의미하는 각국의 언어들이<br>무지개빛으로 새겨진 '러브팩'을 만나보세요.
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="magazine-card">
+                        <a href="#">
+                            <img src="./imgs/magazine_card_img_2.jpg">
+                            <div class="magazine-info">
+                                <p class="magazine-badge">experience
+                                </p>
+                                <p class="magazine__title">2019 bmx 프로 컵 내셔널 개최
+                                </p>
+                                <p class="magazine__sub">실력있는 라이더들의 열띤 경쟁이 예상되는<br>bmx 프로 컵 월드 챔피언십에서 자신의 기량을<br>마음껏 펼쳐 보세요!
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="magazine-card">
+                        <a href="#">
+                            <img src="./imgs/magazine_card_img_3.jpg">
+                            <div class="magazine-info">
+                                <p class="magazine-badge">exclusive
+                                </p>
+                                <p class="magazine__title">인기상품 공식몰 단독 판매
+                                </p>
+                                <p class="magazine__sub">"online store exclusive"<br>마스터마인드 컬렉션 온라인 단독 출시!
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!--instagram 영역-->
+    <div class="thumbnail_layout_main">
+        <section class="instagram">
+            <h2 class="tit_main">
+                <span class="black-txt">@instagram
+                </span>
+            </h2>
+            <ul class="instagram_wrap">
+                <li class="instagram-card">
+                    <a href="#">
+                        <img src="./imgs/insta_card_img_1.jpg">
+                        <div class="instagram-card-content">
+                            <div class="instagram-card-content--outer">
+                                <span class="favorite-icons">
+                                    <i class="material-icons">favorite
+                                    </i>674
+                                </span>
+                                <span class="chat_bubble-icons">
+                                    <i class="material-icons">chat_bubble
+                                    </i>13
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="instagram-card">
+                    <a href="#">
+                        <img src="./imgs/insta_card_img_2.jpg">
+                        <div class="instagram-card-content">
+                            <div class="instagram-card-content--outer">
+                                <span class="favorite-icons">
+                                    <i class="material-icons">favorite
+                                    </i>522
+                                </span>
+                                <span class="chat_bubble-icons">
+                                    <i class="material-icons">chat_bubble
+                                    </i>8
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="instagram-card">
+                    <a href="#">
+                        <img src="./imgs/insta_card_img_3.jpg">
+                        <div class="instagram-card-content">
+                            <div class="instagram-card-content--outer">
+                                <span class="favorite-icons">
+                                    <i class="material-icons">favorite
+                                    </i>489
+                                </span>
+                                <span class="chat_bubble-icons">
+                                    <i class="material-icons">chat_bubble
+                                    </i>6
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="instagram-card">
+                    <a href="#">
+                        <img src="./imgs/insta_card_img_4.jpg">
+                        <div class="instagram-card-content">
+                            <div class="instagram-card-content--outer">
+                                <span class="favorite-icons">
+                                    <i class="material-icons">favorite
+                                    </i>360
+                                </span>
+                                <span class="chat_bubble-icons">
+                                    <i class="material-icons">chat_bubble
+                                    </i>9
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="instagram-card">
+                    <a href="#">
+                        <img src="./imgs/insta_card_img_5.jpg">
+                        <div class="instagram-card-content">
+                            <div class="instagram-card-content--outer">
+                                <span class="favorite-icons">
+                                    <i class="material-icons">favorite
+                                    </i>377
+                                </span>
+                                <span class="chat_bubble-icons">
+                                    <i class="material-icons">chat_bubble
+                                    </i>3
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="instagram-card">
+                    <a href="#">
+                        <img src="./imgs/insta_card_img_6.jpg">
+                        <div class="instagram-card-content">
+                            <div class="instagram-card-content--outer">
+                                <span class="favorite-icons">
+                                    <i class="material-icons">favorite
+                                    </i>645
+                                </span>
+                                <span class="chat_bubble-icons">
+                                    <i class="material-icons">chat_bubble
+                                    </i>20
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="instagram-card">
+                    <a href="#">
+                        <img src="./imgs/insta_card_img_7.jpg">
+                        <div class="instagram-card-content">
+                            <div class="instagram-card-content--outer">
+                                <span class="favorite-icons">
+                                    <i class="material-icons">favorite
+                                    </i>1597
+                                </span>
+                                <span class="chat_bubble-icons">
+                                    <i class="material-icons">chat_bubble
+                                    </i>40
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="instagram-card">
+                    <a href="#">
+                        <img src="./imgs/insta_card_img_8.jpg">
+                        <div class="instagram-card-content">
+                            <div class="instagram-card-content--outer">
+                                <span class="favorite-icons">
+                                    <i class="material-icons">favorite
+                                    </i>512
+                                </span>
+                                <span class="chat_bubble-icons">
+                                    <i class="material-icons">chat_bubble
+                                    </i>75
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="instagram-card">
+                    <a href="#">
+                        <img src="./imgs/insta_card_img_9.jpg">
+                        <div class="instagram-card-content">
+                            <div class="instagram-card-content--outer">
+                                <span class="favorite-icons">
+                                    <i class="material-icons">favorite
+                                    </i>311
+                                </span>
+                                <span class="chat_bubble-icons">
+                                    <i class="material-icons">chat_bubble
+                                    </i>17
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="instagram-card">
+                    <a href="#">
+                        <img src="./imgs/insta_card_img_10.jpg">
+                        <div class="instagram-card-content">
+                            <div class="instagram-card-content--outer">
+                                <span class="favorite-icons">
+                                    <i class="material-icons">favorite
+                                    </i>590
+                                </span>
+                                <span class="chat_bubble-icons">
+                                    <i class="material-icons">chat_bubble
+                                    </i>13
+                                </span>
+                            </div>
+                        </div>
+                    </a>
                 </li>
             </ul>
+        </section>
+    </div>
+    <!-- footer 영역 -->
+    <footer class="footer">
+        <nav class="footer_top_wrap">
+            <div class="footer_top_center">
+                <ul class="footer_sub">
+                    <li>
+                        <a href="#">ABOUT VANS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">주문배송
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">공지사항
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">매장안내
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">상담톡
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer_sns">
+                    <li>
+                        <a href="#">
+                            <img src="imgs/sns_twitter.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="imgs/sns_facebook.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="imgs/sns_youtube.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="imgs/sns_instagram.jpg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="footer_bottom_wrap">
+            <div class="footer_bottom_center">
+                <div class="copyright">
+                    <p>브이에프 코리아(유) 대표이사 : 로마리거, 서울특별시 강남구 테헤란로 317 동훈타워 18층
+                    </p>
+                    <p>사업자등록번호 : 220-88-43561, 통신판매업 신고번호 : 2013-서울강남-02918호, 개인정보 책임자 : 장성철
+                    </p>
+                    <p>고객센터 : 1522-1882, ⓒ유한회사 브이에프 코리아. All Rights Reserved.
+                    </p>
+                    <p>California Transparency in Supply Chain Act of 2010
+                    </p>
+                </div>
+                <div class="link">
+                    <ul>
+                        <li>
+                            <a href="#">구매 이용약관
+                            </a>
+                            <a href="#">
+                                <h3>개인정보 처리방침
+                                </h3>
+                            </a>
+                            <a href="#">청소년 보호방침
+                            </a>
+                            <a href="#">사업자 정보확인
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside">
+                    <h3>소비자피해 보증보험
+                    </h3>
+                    <p>고객님은 안전거래를 위해 현금 등으로 결제시, VANS에서 가입한<br> 소비자피해보증보험 서비스를 이용하실 수 있습니다.
+                    </p>
+                    <span>보증대상 : 미배송, 반품/환불거부, 쇼핑몰 부도
+                    </span>
+                    <a href="#">보증보험 가입사실 확인
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
-</div>
-
-
-
-
-	</body>
+    </footer>
+</body>
 </html>
