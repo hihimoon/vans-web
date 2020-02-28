@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <meta charset="utf-8">
+    <title>VANS</title>
+    <link rel="stylesheet" href="./vans-main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".presentation").click(function() {
+                $('.presentation').removeClass('presentation-active');
+                $(this).addClass('presentation-active');
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <!-- header 영역 -->
+    <header class="header">
+        <div class="nav_top_wrap">
+            <ul class="nav_sub">
+                <li>
+                    <a href="#">로그인/회원가입
+                    </a>
+                </li>
+                <li>
+                    <a href="#">주문조회
+                    </a>
+                </li>
+                <li>
+                    <a href="#">고객센터
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="nav_bottom_wrap">
+            <a class="logo" href="#">
+                <img src="./imgs/logo.png">
+            </a>
+            <ul class="nav_main">
+                <li class="nav-item">
+                    <a href="#">Men
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Women
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Kids
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Customs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Skate
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Surf
+                    </a>
+                </li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="검색" class="form-input">
+                <button class="btn-search">
+                    <span class="search-icons">
+                        <i class="material-icons">search</i>
+                    </span>
+                </button>
+            </div>
+            <div class="shooping_cart">
+                <a href="#" class="cart-icon">
+                    <img class="cartcart" src="./imgs/shopping_cart_2.png">
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <!--컨텐츠 영역-->
+    <div class="contents">
+        <ul class="location">
+            <li>
+                <a href="#">Home
+                </a>
+            </li>
+            <li>
+                <a href="#">Shoes
+                </a>
+            </li>
+            <li>
+                <h3>블랙볼 올드스쿨
+                </h3>
+            </li>
+        </ul>
+        <div class="detail">
+            <div class="img_area">
+                <img src="./imgs/product_img_2.jpg">
+            </div>
+            <div class="gallery_wrap">
+                <ul class="gallery">
+                    <li>
+                        <a href="#"><img src="./imgs/product_img_1.jpg"></a>
+                    </li>
+                     <li>
+                        <a href="#"><img src="./imgs/product_img_3.jpg"></a>
+                    </li>
+                     <li>
+                        <a href="#"><img src="./imgs/product_img_4.jpg"></a>
+                    </li>
+                     <li>
+                        <a href="#"><img src="./imgs/product_img_5.jpg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tag">
+            <h3>블랙볼 올드스쿨</h3>
+            <span>75,000 원</span>
+        </div>
+    </div>
+
+        
+        
+        
+    </body>
+</html>
